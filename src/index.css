@@ -14,3 +14,23 @@ body,
 .container {
   min-height: 100%;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  padding: 18px 36px 18px 20px;
+  background: linear-gradient(90deg, #672280 1%, #a626d3 100%);
+  color: #fff;
+}
+
+.header__img {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.125rem;
+}
