@@ -34,3 +34,47 @@ body,
   font-size: 1.25rem;
   letter-spacing: -0.125rem;
 }
+
+.meme {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 36px 55px;
+}
+
+.meme__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 36px;
+}
+
+.form__inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.meme__form input {
+  width: 100%;
+  border: 1px solid #d5d4d8;
+  border-radius: 5px;
+  padding: 10px;
+  color: #0d0d0d;
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(90.41deg, #711f8d 1%, #a818da 100%);
+  color: #fff;
+  font-family: "Karla";
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  cursor: pointer;
+}
