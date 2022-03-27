@@ -4,8 +4,8 @@ export default function Meme() {
   const [memesArray, setMemesArray] = useState([]);
 
   const [meme, setMeme] = useState({
-    name: "",
-    url: "",
+    name: "Shut up and take my money",
+    url: "https://i.imgflip.com/3si4.jpg",
   });
 
   useEffect(() => {
@@ -35,6 +35,9 @@ export default function Meme() {
         <button onClick={getMeme} className="form__btn">
           Get a new meme image 🖼️
         </button>
+      </div>
+      <div className="meme__container">
+        <img src={meme.url} alt={meme.name} className="meme__img" />
       </div>
     </main>
   );
