@@ -1,4 +1,14 @@
+import { useEffect, useState } from "react";
+
 export default function Meme() {
+  const [memesArray, setMemesArray] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((response) => response.json())
+      .then((result) => setMemesArray(result.data.memes));
+  }, []);
+
   return (
     <main className="meme">
       <form className="meme__form">
