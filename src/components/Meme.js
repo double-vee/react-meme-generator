@@ -6,6 +6,8 @@ export default function Meme() {
   const [meme, setMeme] = useState({
     name: "Shut up and take my money",
     url: "https://i.imgflip.com/3si4.jpg",
+    topText: "",
+    bottomText: "",
   });
 
   useEffect(() => {
@@ -25,12 +27,27 @@ export default function Meme() {
     }));
   }
 
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setMeme((prevMeme) => ({ ...prevMeme, [name]: value }));
+  }
+
   return (
     <main className="meme">
       <div className="meme__form">
         <div className="form__inputs">
-          <input type="text" />
-          <input type="text" />
+          <input
+            type="text"
+            name="topText"
+            value={meme.topText}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="bottomText"
+            value={meme.bottomText}
+            onChange={handleChange}
+          />
         </div>
         <button onClick={getMeme} className="form__btn">
           Get a new meme image 🖼️
@@ -38,6 +55,8 @@ export default function Meme() {
       </div>
       <div className="meme__container">
         <img src={meme.url} alt={meme.name} className="meme__img" />
+        <h2 className="meme__text top">{meme.topText}</h2>
+        <h2 className="meme__text bottom">{meme.bottomText}</h2>
       </div>
     </main>
   );
