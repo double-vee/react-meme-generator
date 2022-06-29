@@ -38,6 +38,8 @@ body,
 .meme {
   display: flex;
   flex-direction: column;
+  max-width: 700px;
+  margin-inline: auto;
   padding: 36px 36px 55px;
 }
 
@@ -62,7 +64,7 @@ body,
   color: #0d0d0d;
   font-family: "Karla";
   font-weight: 400;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .form__btn {
@@ -99,7 +101,7 @@ body,
   padding: 1rem;
   color: #fff;
   font-family: Impact, sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -114,4 +116,24 @@ body,
 
 .bottom {
   bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .header {
+    height: auto;
+    padding-block: 16px;
+  }
+
+  .meme {
+    padding-inline: 16px;
+  }
+
+  .form__inputs {
+    flex-direction: column;
+  }
+
+  .meme__text {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
 }
